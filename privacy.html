@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy - Flapio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'bitcount': ['Bitcount Grid Double', 'Impact', 'Arial Black', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col bg-black text-white">
+  <!-- Header with white background -->
+  <div class="bg-black">
+    <div class="p-4 md:p-10">
+      <header class="mb-6 md:mb-10">
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex justify-between items-center mb-8">
+              <a href="index.html" class="flex items-center space-x-8 text-2xl font-normal text-white font-bitcount tracking-wider">
+            <img src="logo.svg" alt="Flapio Logo" class="w-8 h-8 drop-shadow-lg" style="filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.6));">
+            <span class="ml-4">FLAPIO</span>
+          </a>
+          <div class="space-x-8">
+            <a href="support.html" class="text-white hover:text-red-400 font-poppins font-medium text-base">Support</a>
+            <a href="privacy.html" class="text-white font-poppins font-semibold text-base">Privacy</a>
+          </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <div class="md:hidden">
+          <div class="flex justify-between items-center mb-4">
+            <a href="index.html" class="flex items-center space-x-8 text-2xl font-normal text-white font-bitcount tracking-wider">
+              <img src="logo.svg" alt="Flapio Logo" class="w-8 h-8 drop-shadow-lg" style="filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.6));">
+              FLAPIO
+            </a>
+            <button onclick="toggleMenu()" class="text-white hover:text-red-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="hidden">
+            <div class="bg-black rounded-lg shadow-lg p-4 space-y-3">
+              <a href="support.html" class="block text-white hover:text-red-400 font-poppins font-medium text-base">Support</a>
+              <a href="privacy.html" class="block text-white font-poppins font-semibold text-base">Privacy</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="flex-grow bg-black">
+    <main class="max-w-3xl mx-auto px-4 md:px-6 py-12 md:py-16">
+      <h1 class="text-4xl md:text-5xl font-normal text-white font-bitcount tracking-wider mb-8">Privacy Policy</h1>
+      
+      <div class="space-y-8 font-poppins text-gray-600">
+        <p class="text-lg font-light">
+          Last updated: February 21, 2025
+        </p>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Data Collection</h2>
+          <p class="font-light leading-relaxed">
+            Flapio uses your device's LiDAR sensor and camera to create 3D scans of objects. This data includes point cloud coordinates and color information captured during scanning sessions. All processing happens on your device initially, with optional cloud storage for sharing features.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Data Storage</h2>
+          <p class="font-light leading-relaxed">
+            Your 3D object scans are stored locally on your device by default. When you choose to share a scan using redeem codes, the scan data is uploaded to our secure cloud servers for sharing purposes. You can delete shared scans at any time, which will remove them from our servers.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Camera and Sensor Usage</h2>
+          <p class="font-light leading-relaxed">
+            Flapio requires access to your device's camera and LiDAR sensor for 3D object scanning functionality. The camera is used to capture color information, while the LiDAR sensor creates the 3D point cloud data. These sensors are only active during scanning sessions and require explicit user permission.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Sharing and Redeem Codes</h2>
+          <p class="font-light leading-relaxed">
+            When you generate a redeem code to share a scan, the scan data is uploaded to our servers and made accessible to anyone with the code. Shared scans are stored securely and can be accessed by anyone who has the redeem code. You are responsible for sharing codes only with people you trust.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Data Security</h2>
+          <p class="font-light leading-relaxed">
+            All scan data is encrypted during transmission and storage. We use industry-standard security measures to protect your data. However, please note that shared scans are accessible to anyone with the redeem code, so we recommend only sharing codes with trusted individuals.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Analytics</h2>
+          <p class="font-light leading-relaxed">
+            We collect anonymous usage statistics to improve the app's performance and features. This data cannot be traced back to individual users and does not include any personal information or scan data.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Contact</h2>
+          <p class="font-light leading-relaxed">
+            If you have any questions about our privacy policy or data practices, please contact us at privacy@flapio.app
+          </p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- White footer -->
+  <footer class="p-4 md:p-6 text-center bg-black border-t text-white font-poppins">
+    <div class="space-y-2">
+      <p class="text-sm font-light">&copy; 2025 Flapio. All rights reserved.</p>
+      <a href="https://apps.apple.com/app/flapio/id123456789" class="text-base font-medium hover:text-red-400 inline-block">
+        Available on iOS App Store
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>

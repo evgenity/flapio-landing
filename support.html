@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Flapio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'bitcount': ['Bitcount Grid Double', 'Impact', 'Arial Black', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col bg-black text-white">
+  <!-- Header with white background -->
+  <div class="bg-black">
+    <div class="p-4 md:p-10">
+      <header class="mb-6 md:mb-10">
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex justify-between items-center mb-8">
+              <a href="index.html" class="flex items-center space-x-8 text-2xl font-normal text-white font-bitcount tracking-wider">
+            <img src="logo.svg" alt="Flapio Logo" class="w-8 h-8 drop-shadow-lg" style="filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.6));">
+            <span class="ml-4">FLAPIO</span>
+          </a>
+          <div class="space-x-8">
+            <a href="support.html" class="text-white font-poppins font-semibold text-base">Support</a>
+            <a href="privacy.html" class="text-white hover:text-red-400 font-poppins font-medium text-base">Privacy</a>
+          </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <div class="md:hidden">
+          <div class="flex justify-between items-center mb-4">
+            <a href="index.html" class="flex items-center space-x-8 text-2xl font-normal text-white font-bitcount tracking-wider">
+              <img src="logo.svg" alt="Flapio Logo" class="w-8 h-8 drop-shadow-lg" style="filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.6));">
+              FLAPIO
+            </a>
+            <button onclick="toggleMenu()" class="text-white hover:text-red-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="hidden">
+            <div class="bg-black rounded-lg shadow-lg p-4 space-y-3">
+              <a href="support.html" class="block text-white font-poppins font-semibold text-base">Support</a>
+              <a href="privacy.html" class="block text-white hover:text-red-400 font-poppins font-medium text-base">Privacy</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="flex-grow bg-black">
+    <main class="max-w-3xl mx-auto px-4 md:px-6 py-12 md:py-16">
+      <h1 class="text-4xl md:text-5xl font-normal text-white font-bitcount tracking-wider mb-8">Support</h1>
+      
+      <div class="space-y-8 font-poppins text-gray-600">
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Getting Started</h2>
+          <p class="font-light leading-relaxed">
+            Flapio requires an iPhone with LiDAR technology (iPhone 12 Pro and newer). To create a 3D scan, tap the "Scan" button and follow the on-screen instructions. Position the object you want to scan within the scanning area and move slowly around it while the app captures the 3D data.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Device Requirements</h2>
+          <div class="space-y-3">
+            <div>
+              <h3 class="font-medium text-white mb-2">Supported Devices</h3>
+              <p class="font-light leading-relaxed">
+                Flapio requires an iPhone with LiDAR sensor: iPhone 12 Pro, iPhone 12 Pro Max, iPhone 13 Pro, iPhone 13 Pro Max, iPhone 14 Pro, iPhone 14 Pro Max, iPhone 15 Pro, iPhone 15 Pro Max, or newer.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium text-white mb-2">iOS Version</h3>
+              <p class="font-light leading-relaxed">
+                Requires iOS 15.0 or later for optimal performance and all features.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Common Questions</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="font-medium text-white mb-2">How do I share a scan?</h3>
+              <p class="font-light leading-relaxed">
+                Tap the QR code icon on any scan in your gallery to generate a redeem code. Copy the code and share it with friends. They can enter the code in the "Shared" tab to access your scan.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium text-white mb-2">Why is my scan blurry or incomplete?</h3>
+              <p class="font-light leading-relaxed">
+                Ensure good lighting conditions and hold your device steady during scanning. Avoid moving too quickly and make sure the object is well-lit and positioned within the scanning area. Move slowly around the object to capture all angles.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium text-white mb-2">Can I delete shared scans?</h3>
+              <p class="font-light leading-relaxed">
+                Yes, you can delete scans from your gallery at any time. Long-press on a scan and select "Delete" to remove it permanently. Note that this will also remove the scan from anyone who has access via redeem codes.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium text-white mb-2">How do I redeem a shared scan?</h3>
+              <p class="font-light leading-relaxed">
+                Go to the "Shared" tab and enter the 8-character redeem code in the text field. Tap "Redeem" to add the shared scan to your collection.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Troubleshooting</h2>
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-medium text-white mb-2">Scan not starting</h3>
+              <p class="font-light leading-relaxed">
+                Make sure you've granted camera and LiDAR permissions. Check that your device has sufficient storage space and restart the app if needed.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium text-white mb-2">Poor scan quality</h3>
+              <p class="font-light leading-relaxed">
+                Ensure you're in a well-lit environment and hold the device steady. Clean your camera lens and avoid reflective surfaces or bright lights behind the object. Make sure the object has good contrast and texture for better scanning results.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium text-white mb-2">Redeem code not working</h3>
+              <p class="font-light leading-relaxed">
+                Double-check the code is entered correctly (8 characters, case-sensitive). Make sure you have an internet connection and try refreshing the shared scans.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">Contact Us</h2>
+          <p class="font-light leading-relaxed">
+            Need more help? Email us at support@flapio.app
+          </p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- White footer -->
+  <footer class="p-4 md:p-6 text-center bg-black border-t text-white font-poppins">
+    <div class="space-y-2">
+      <p class="text-sm font-light">&copy; 2025 Flapio. All rights reserved.</p>
+      <a href="https://apps.apple.com/app/flapio/id123456789" class="text-base font-medium hover:text-red-400 inline-block">
+        Available on iOS App Store
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
