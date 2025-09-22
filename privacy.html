@@ -27,13 +27,13 @@
   </script>
 </head>
 <body class="min-h-screen flex flex-col bg-black text-white">
-  <!-- Header with white background -->
+  <!-- Header -->
   <div class="bg-black">
     <div class="p-4 md:p-10">
       <header class="mb-6 md:mb-10">
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex justify-between items-center mb-8">
-              <a href="index.html" class="flex items-center space-x-8 text-2xl font-normal text-white font-bitcount tracking-wider">
+          <a href="index.html" class="flex items-center space-x-8 text-2xl font-normal text-white font-bitcount tracking-wider">
             <img src="logo.svg" alt="Flapio Logo" class="w-8 h-8 drop-shadow-lg" style="filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.6));">
             <span class="ml-4">FLAPIO</span>
           </a>
@@ -56,8 +56,6 @@
               </svg>
             </button>
           </div>
-          
-          <!-- Mobile Menu -->
           <div id="mobile-menu" class="hidden">
             <div class="bg-black rounded-lg shadow-lg p-4 space-y-3">
               <a href="support.html" class="block text-white hover:text-red-400 font-poppins font-medium text-base">Support</a>
@@ -74,18 +72,23 @@
     <main class="max-w-3xl mx-auto px-4 md:px-6 py-12 md:py-16">
       <h1 class="text-4xl md:text-5xl font-normal text-white font-bitcount tracking-wider mb-8">Privacy Policy</h1>
       
-      <div class="space-y-8 font-poppins text-gray-600">
+      <div class="space-y-8 font-poppins text-gray-300">
         <p class="text-lg font-light">
-          Last updated: February 21, 2025
+          Last updated: September 22, 2025
         </p>
 
+        <!-- Data Collection -->
         <section class="space-y-4">
           <h2 class="text-2xl font-bitcount tracking-wider text-white">Data Collection</h2>
           <p class="font-light leading-relaxed">
             Flapio uses your device's LiDAR sensor and camera to create 3D scans of objects. This data includes point cloud coordinates and color information captured during scanning sessions. All processing happens on your device initially, with optional cloud storage for sharing features.
           </p>
+          <p class="font-light leading-relaxed">
+            When available and permitted by you, Flapio may also access Apple’s TrueDepth capabilities as part of the generic scanner. While the app does not provide a dedicated “face-scan” feature, users may point the scanner at any subject, including a face. See <strong>“TrueDepth / Face-Related Data (Optional User Action)”</strong> below for details on what may be accessed, why, and how it is handled.
+          </p>
         </section>
 
+        <!-- Data Storage -->
         <section class="space-y-4">
           <h2 class="text-2xl font-bitcount tracking-wider text-white">Data Storage</h2>
           <p class="font-light leading-relaxed">
@@ -93,45 +96,76 @@
           </p>
         </section>
 
+        <!-- Camera and Sensor Usage -->
         <section class="space-y-4">
           <h2 class="text-2xl font-bitcount tracking-wider text-white">Camera and Sensor Usage</h2>
           <p class="font-light leading-relaxed">
-            Flapio requires access to your device's camera and LiDAR sensor for 3D object scanning functionality. The camera is used to capture color information, while the LiDAR sensor creates the 3D point cloud data. These sensors are only active during scanning sessions and require explicit user permission.
+            Flapio requires access to your device's camera and sensors (including LiDAR and, on supported devices, the TrueDepth system) for 3D scanning functionality. The camera captures color information; LiDAR and/or TrueDepth provide depth information. These sensors are only active during scanning sessions and require your explicit permission.
           </p>
         </section>
 
+        <!-- NEW: TrueDepth / Face-Related Data (Optional User Action) -->
+        <section class="space-y-4" id="truedepth">
+          <h2 class="text-2xl font-bitcount tracking-wider text-white">TrueDepth / Face-Related Data (Optional User Action)</h2>
+          <p class="font-light leading-relaxed">
+            The scanner is generic. If you direct it at a face, Flapio may access the following via Apple’s TrueDepth APIs on supported devices:
+          </p>
+          <ul class="list-disc ml-6 space-y-2 font-light leading-relaxed">
+            <li>Facial landmarks / topology (key points)</li>
+            <li>Blendshape coefficients (expressions), if applicable</li>
+            <li>Face depth map (geometry from TrueDepth)</li>
+            <li>Pose / orientation of the face relative to the device</li>
+          </ul>
+          <p class="font-light leading-relaxed">
+            <strong>Purpose.</strong> This face-related data is used solely to enable accurate alignment, measurement, and real-time guidance when a face is within the scan, improving scan consistency and usability. It is <em>not</em> used for advertising, profiling, or user tracking.
+          </p>
+          <p class="font-light leading-relaxed">
+            <strong>Processing & Retention.</strong> Face-related data is processed <em>on device</em> in real time and is not persistently stored by default. Temporary buffers used during an active scan are discarded immediately after use. Any derived output (e.g., a 3D model) is saved only if you explicitly save or export it.
+          </p>
+          <p class="font-light leading-relaxed">
+            <strong>Sharing.</strong> We do not share face-related data (landmarks, depth, blendshapes, pose) with third parties. If you choose to export or share a scan, you control what is shared; raw TrueDepth face data is not included unless you explicitly opt in via an export flow that clearly discloses its contents.
+          </p>
+          <p class="font-light leading-relaxed">
+            <strong>Consent & Control.</strong> Access to the camera/TrueDepth requires your permission. You can revoke permissions at any time in system settings. The app functions without scanning a face; using the scanner on non-face subjects does not collect face-related data.
+          </p>
+        </section>
+
+        <!-- Sharing and Redeem Codes -->
         <section class="space-y-4">
           <h2 class="text-2xl font-bitcount tracking-wider text-white">Sharing and Redeem Codes</h2>
           <p class="font-light leading-relaxed">
-            When you generate a redeem code to share a scan, the scan data is uploaded to our servers and made accessible to anyone with the code. Shared scans are stored securely and can be accessed by anyone who has the redeem code. You are responsible for sharing codes only with people you trust.
+            When you generate a redeem code to share a scan, the scan data is uploaded to our servers and made accessible to anyone with the code. Shared scans are stored securely and can be accessed by anyone who has the redeem code. You are responsible for sharing codes only with people you trust. Face-related raw TrueDepth data is not included in shared content unless you have explicitly opted in during export.
           </p>
         </section>
 
+        <!-- Data Security -->
         <section class="space-y-4">
           <h2 class="text-2xl font-bitcount tracking-wider text-white">Data Security</h2>
           <p class="font-light leading-relaxed">
-            All scan data is encrypted during transmission and storage. We use industry-standard security measures to protect your data. However, please note that shared scans are accessible to anyone with the redeem code, so we recommend only sharing codes with trusted individuals.
+            All scan data is encrypted during transmission and storage. We use industry-standard security measures to protect your data. Shared scans are accessible to anyone with the redeem code, so share codes only with trusted individuals.
           </p>
         </section>
 
+        <!-- Analytics (clarified) -->
         <section class="space-y-4">
           <h2 class="text-2xl font-bitcount tracking-wider text-white">Analytics</h2>
           <p class="font-light leading-relaxed">
-            We collect anonymous usage statistics to improve the app's performance and features. This data cannot be traced back to individual users and does not include any personal information or scan data.
+            We collect anonymous usage statistics to improve app performance and features. Analytics do not include your scan content, point clouds, or any face-related TrueDepth data.
           </p>
         </section>
 
+        <!-- Contact -->
         <section class="space-y-4">
           <h2 class="text-2xl font-bitcount tracking-wider text-white">Contact</h2>
           <p class="font-light leading-relaxed">
-            If you have any questions about our privacy policy or data practices, please contact us at privacy@flapio.app
+            If you have questions about our privacy policy or data practices, contact us at <a class="underline hover:text-red-400" href="mailto:privacy@flapio.app">privacy@flapio.app</a>.
           </p>
         </section>
       </div>
     </main>
   </div>
 
-  <!-- White footer -->
+  <!-- Footer -->
   <footer class="p-4 md:p-6 text-center bg-black border-t text-white font-poppins">
     <div class="space-y-2">
       <p class="text-sm font-light">&copy; 2025 Flapio. All rights reserved.</p>
@@ -140,6 +174,5 @@
       </a>
     </div>
   </footer>
-
 </body>
 </html>
